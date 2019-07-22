@@ -1,0 +1,32 @@
+<!-- to display only selected checkbox values -->
+
+<% if @nameAr %>
+	<h2>Existing users</h2><br>
+	<hr>
+		<%= @nameAr.each do |x| %>
+			<%= x %>
+		<% end %>
+	<br>
+<% end %>
+<br>
+<% if @emailAr %>
+	<h2>Existing emails</h2><br>
+	<hr>
+		<%= @emailAr.each do |x| %>
+			<%= x %>
+		<% end %>
+	<br>
+<% end %>
+<br>
+<% if @compantAr %>
+	<h2>Existing companies</h2><br>
+	<hr>
+		<%= @compantAr.each do |x| %>
+			<%= x %>
+		<% end %>
+	<br>
+<% end %>
+<br>
+
+
+<%= link_to 'Back', choice_path %>

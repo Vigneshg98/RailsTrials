@@ -1,0 +1,24 @@
+<h2>View details of your choice</h2><br>
+
+<%= form_tag choice_path do %>
+
+
+	<p>
+		<label for="name">Name</label>
+  	<%= check_box_tag :name %>
+	</p>
+  <p>
+		<label for="email">Email</label>
+  	<%= check_box_tag :email %>
+	</p>
+	<p>
+		<label for="company">Company</label>
+  	<%= check_box_tag :company %>
+	</p>
+  <p>
+    <%= submit_tag "Show" %>
+  </p>
+
+<% end %>
+
+<%= link_to 'Back', users_path %>

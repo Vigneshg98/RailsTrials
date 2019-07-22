@@ -1,0 +1,49 @@
+<%= form_with model: @user, local: true do |form| %>
+ 
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@user.errors.count, "error") %> prohibited
+        this user from being saved.
+      </h2>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <h2>Create your profile</h2>
+  <br>
+
+  <p>
+    <%= form.label :First_Name %><br>
+    <%= form.text_field :firstname %>
+  </p>
+ 
+  <p>
+    <%= form.label :Last_Name %><br>
+    <%= form.text_field :lastname %>
+  </p>
+
+  <p>
+    <%= form.label :Age %><br>
+    <%= form.number_field :age %>
+  </p>
+
+  <p>
+    <%= form.label :Email %><br>
+    <%= form.email_field :email %>
+  </p>
+
+  <p>
+    <%= form.label :Company %><br>
+    <%= form.text_field :company %>
+  </p> 
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
